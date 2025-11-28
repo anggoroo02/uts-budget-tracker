@@ -140,6 +140,18 @@
             }
         }
 
+        // Reset All Data
+        function resetData() {
+            if (confirm("Semua data akan dihapus dan tidak bisa dikembalikan. Lanjutkan?")) {
+                localStorage.clear();
+                transactions = [];
+                renderTransactions();
+                updateSummary();
+                showAlert("🧹 Semua data berhasil direset!", "success");
+            }
+        }
+
+
         // Open Edit Modal
         function openEditModal(id) {
             const transaction = transactions.find(tx => tx.id === id);
