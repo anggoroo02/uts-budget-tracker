@@ -1,7 +1,7 @@
 # Budget Tracker - Aplikasi Penganggaran
 
 ## Deskripsi Proyek
-Budget Tracker adalah aplikasi web interaktif untuk mengelola keuangan pribadi. Pengguna dapat mencatat pemasukan dan pengeluaran, melihat ringkasan saldo real-time, serta mengedit dan menghapus transaksi dengan mudah.
+Budget Tracker adalah aplikasi web interaktif untuk mengelola keuangan pribadi. Pengguna dapat mencatat pemasukan dan pengeluaran, melihat ringkasan saldo real-time, serta mengedit dan menghapus transaksi dengan mudah menggunakan localStorage browser (tanpa aplikasi PHP dan Database, jadinya local).
 
 ## Fitur Utama
 Tambah transaksi (pemasukan/pengeluaran)
@@ -12,6 +12,9 @@ Daftar transaksi terurut berdasarkan tanggal
 Penyimpanan data dengan localStorage
 Alert notifikasi untuk feedback pengguna
 Responsive design (mobile-friendly)
+
+## Screenshoot Aplikasi
+![image alt](temp_link_hehe)
 
 ## Implementasi Teknis
 

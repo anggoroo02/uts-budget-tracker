@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Budget Tracker - Aplikasi Penganggaran</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Header -->
+        <div class="header">
+            <h1>Budget Tracker</h1>
+            <p>Kelola keuangan Anda dengan mudah dan efisien</p>
+        </div>
+
+        <!-- Alert Container -->
+        <div id="alertContainer"></div>
+
+        <!-- Main Content -->
+        <div class="main-content">
+            <!-- Form Section -->
+            <div class="card">
+                <h2>Tambah Transaksi</h2>
+                <form id="transactionForm">
+                    <div class="form-group">
+                        <label for="description">Deskripsi</label>
+                        <input type="text" id="description" placeholder="Contoh: Gaji bulanan" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="amount">Jumlah (Rp)</label>
+                        <input type="number" id="amount" placeholder="0" min="0" step="1000" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="category">Kategori</label>
+                        <select id="category" required>
+                            <option value="">-- Pilih Kategori --</option>
+                            <optgroup label="Pemasukan">
+                                <option value="Gaji">Gaji</option>
+                                <option value="Bonus">Bonus</option>
+                                <option value="Hadiah">Hadiah</option>
+                                <option value="Investasi">Investasi</option>
+                            </optgroup>
+                            <optgroup label="Pengeluaran">
+                                <option value="Makanan">Makanan</option>
+                                <option value="Transportasi">Transportasi</option>
+                                <option value="Hiburan">Hiburan</option>
+                                <option value="Utilitas">Utilitas</option>
+                                <option value="Kesehatan">Kesehatan</option>
+                                <option value="Pendidikan">Pendidikan</option>
+                                <option value="Lainnya">Lainnya</option>
+                            </optgroup>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="type">Tipe</label>
+                        <select id="type" required>
+                            <option value="income">Pemasukan</option>
+                            <option value="expense">Pengeluaran</option>
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="date">Tanggal</label>
+                        <input type="date" id="date" required>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="notes">Catatan (opsional)</label>
+                        <textarea id="notes" placeholder="Catatan tambahan..."></textarea>
+                    </div>
+
+                    <button type="submit" class="btn btn-primary">Tambah Transaksi</button>
+                </form>
+            </div>
+
+            <!-- Summary & List Section -->
+            <div>
+                <!-- Summary Cards -->
+                <div class="card" style="margin-bottom: 30px;">
+                    <h2>Ringkasan Keuangan</h2>
+                    <div class="summary-cards">
+                        <div class="summary-card income">
+                            <p>Total Pemasukan</p>
+                            <h3 id="totalIncome">Rp 0</h3>
+                        </div>
+                        <div class="summary-card expense">
+                            <p>Total Pengeluaran</p>
+                            <h3 id="totalExpense">Rp 0</h3>
+                        </div>
+                        <div class="summary-card balance">
+                            <p>Saldo</p>
+                            <h3 id="totalBalance">Rp 0</h3>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transaction List -->
+                <div class="card">
+                    <h2>Daftar Transaksi</h2>
+                    <div id="transactionList" class="transaction-list">
+                        <div class="empty-state">
+                            <p>Belum ada transaksi. Mulai dengan menambah transaksi baru!</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Edit Modal -->
+    <div id="editModal" class="modal">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h2>Edit Transaksi</h2>
+                <button type="button" class="close-btn">&times;</button>
+            </div>
+            <form id="editForm">
+                <div class="form-group">
+                    <label for="editDescription">Deskripsi</label>
+                    <input type="text" id="editDescription" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editAmount">Jumlah (Rp)</label>
+                    <input type="number" id="editAmount" min="0" step="1000" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editCategory">Kategori</label>
+                    <select id="editCategory" required>
+                        <option value="Gaji">Gaji</option>
+                        <option value="Bonus">Bonus</option>
+                        <option value="Hadiah">Hadiah</option>
+                        <option value="Investasi">Investasi</option>
+                        <option value="Makanan">Makanan</option>
+                        <option value="Transportasi">Transportasi</option>
+                        <option value="Hiburan">Hiburan</option>
+                        <option value="Utilitas">Utilitas</option>
+                        <option value="Kesehatan">Kesehatan</option>
+                        <option value="Pendidikan">Pendidikan</option>
+                        <option value="Lainnya">Lainnya</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="editType">Tipe</label>
+                    <select id="editType" required>
+                        <option value="income">Pemasukan</option>
+                        <option value="expense">Pengeluaran</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label for="editDate">Tanggal</label>
+                    <input type="date" id="editDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="editNotes">Catatan</label>
+                    <textarea id="editNotes"></textarea>
+                </div>
+
+                <button type="submit" class="btn btn-primary">Simpan Perubahan</button>
+            </form>
+        </div>
+    </div>
+    <footer class="footer">
+        <p>&copy; 2025 BudgetTracker by Anggoro Jati. All rights reserved.</p>
+        <div class="social-links">
+            <a href="https://www.instagram.com/anggorojati18" target="_blank">Instagram</a>
+            <a href="https://www.linkedin.com/in/anggoro-jati-pratikto-2285a232a" target="_blank">LinkedIn</a>
+        </div>
+    </footer>
+    <script src="scripts.js"></script>
+</body>
+</html>
