@@ -15,8 +15,7 @@ Responsive design (mobile-friendly)
 
 ## Screenshoot Aplikasi
 
-![image alt](#)
-
+![image alt](https://github.com/anggoroo02/uts-budget-tracker/blob/c82815ed2bc418a77f0d9b5c35246d6aa25a53df/images/index-dengan-data.jpg)
 aplikasi sudah online dengan github, silakhkan [coba](https://anggoroo02.github.io/uts-budget-tracker/)
 
 ## Implementasi Teknis
