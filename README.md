@@ -14,7 +14,10 @@ Alert notifikasi untuk feedback pengguna
 Responsive design (mobile-friendly)
 
 ## Screenshoot Aplikasi
-![image alt](https://github.com/anggoroo02/uts-budget-tracker/blob/55ccdcd338a55e8dbda139c215334255e4728cce/images/temp-img.jpg)
+
+![image alt](#)
+
+aplikasi sudah online dengan github, silakhkan [coba](https://anggoroo02.github.io/uts-budget-tracker/)
 
 ## Implementasi Teknis
 
