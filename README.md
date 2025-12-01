@@ -35,7 +35,7 @@ aplikasi sudah online dengan github, silakhkan [coba](https://anggoroo02.github.
 - **Utility Functions**: formatCurrency, formatDate, showAlert
 
 ### Tahapan Pengembangan
-1. **Desain di Figma**: Wireframe halaman utama & modal edit
+1. **Desain**: Wireframe halaman utama & modal edit
 2. **Implementasi HTML**: Struktur markup dengan semantic elements
 3. **Styling CSS**: Layout, color scheme, responsiveness
 4. **Interaktivitas JS**: Form handling, CRUD operations, UI updates
@@ -47,8 +47,8 @@ aplikasi sudah online dengan github, silakhkan [coba](https://anggoroo02.github.
 4. Edit atau hapus transaksi dengan tombol di setiap item
 5. Data otomatis tersimpan di browser (localStorage)
 
-## Link Figma
-[Klik di sini untuk melihat desain Figma](https://www.figma.com/design/ejPWmkrCCmI19EvQVaU8gS/Budget-Tracker---Aplikasi-Penganggaran?node-id=1-902&t=vgG52ZR0wLcOWuYY-1)
+## Link Mockup
+[Klik di sini untuk melihat desain mockup](https://www.canva.com/design/DAG6LmHpYpM/JiIkX_J_Xc1j2PK9IXX2FQ/edit?utm_content=DAG6LmHpYpM&utm_campaign=designshare&utm_medium=link2&utm_source=sharebutton)
 
 ## Technologies Used
 - HTML5 (Semantic markup)
